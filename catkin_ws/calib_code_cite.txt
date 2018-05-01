@@ -1,0 +1,2 @@
+https://docs.opencv.org/2.4/doc/tutorials/calib3d/camera_calibration/camera_calibration.html
+http://stackoverflow.com/questions/18052337/how-to-verify-that-the-camera-calibration-is-correct-or-how-to-estimate-the-er

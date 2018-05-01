@@ -1,0 +1,91 @@
+/*///----------------------------------Imshow--------------------------------------------------------------------------------------
+void ObjectDetect::OriginImShow()
+{
+    Size szl = m_imgOriginalL.size();
+    Size szr = m_imgOriginalL.size();
+    Mat im3(szl.height+szr.height, szl.width+szr.width, CV_8UC3);
+    Mat left(im3, Rect(0, 0, szl.width, szl.height));
+    m_imgOriginalL.copyTo(left);
+    Mat right(im3, Rect(szl.width, 0, szr.width, szr.height));
+    m_imgOriginalR.copyTo(right);
+    namedWindow("Originals",CV_WINDOW_NORMAL);
+    imshow("Originals", im3);
+    waitKey(30);
+return;
+}//-----------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*///--------------------------------------Temporary code-------------------------------------------------------------------------
+///---Here I wanted to find out in which row a prespective distance located. should be removed in the last version----------------
+  int alt=0, altno=0, firstalt=0;
+  for(int i=0;i<dst.rows;i++)
+    for(int j=0;j<dst.cols;j++)
+     if(dst.at<char>(i,j))
+     { if(!firstalt) firstalt=i; 
+       altno++;
+       alt=alt+i;
+     }
+  if(altno) alt=alt/altno;
+  cout<<"thresh:"<<threshold_value<<" --> "<<firstalt<<"\n";
+///------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*///-------------------------------------------------------Blob Detection---------------------------------------------------------
+  ///--B2. Find contours
+  findContours( dst, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0, 0) );
+
+  ///--B3 Draw contours
+
+  for( int i = 0; i< contours.size(); i++ )
+  {
+	  Scalar color = Scalar( rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255) );
+	  minEnclosingCircle(contours[i], center, radius);
+	  //if (radius>10) area = contourArea(contours[i], false);
+	  //if ((area/(3.14*radius*radius))>0.2 && radius>20)
+	  drawContours( src, contours, i, color, 2, 8, hierarchy, 0, Point() );
+  }
+
+
+  }
+  
+
+  imshow( "blob", src);
+  waitKey(0);
+///----------------------------------------------------------------------------------------------------------------------------------*/
+
+/*////--------------------------------------------------------------some erosion------------------------------------------------------
+	Mat element = getStructuringElement( 0, Size( 2*20 + 1, 2*1+1 ), Point( 20, 1 ) );
+	erode(dst,dst2,element);
+////-------------------------------------------------------------------------------------------------------------------------------*/
+
+/*///--------------------------------------------------------------Alternative plane detection------------------------------------
+/*  for(int threshold_value=255;threshold_value>20;threshold_value--)
+  {
+	  int margine = 0;
+	  //if(threshold_value<255) 
+          {margine = (-1.14901589)*threshold_value + 297.82135;  
+          //(-1.754304562)*threshold_value + 285.5392256 - ROI_Y1; //1.9853468*threshold_value + 191.2386018 // 1.754304562*threshold_value + 194.4607744
+	  rectangle(imgDisparity32F, Point(0,imgDisparity32F.rows-1-margine), Point(imgDisparity32F.cols-1,imgDisparity32F.rows-1), Scalar(0,0,0), -1, 8);
+          }    
+
+	  threshold( imgDisparity32F, dst, threshold_value - 1, 255,3 );
+	  threshold( dst, dst, threshold_value + 1, 255,4 );
+	  threshold( dst, dst, threshold_value, 255,0 );
+
+	  bitwise_or(drawing,dst,drawing);
+
+
+  }*/
+///------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*//--------------------------------extracts data for linear Regression in 32F--------------------------------
+  vector<float> highestDisparity(m_imgOriginalL.cols);
+  int jmax;
+  for(int i = 0; i<imgDisparity32F.rows; i++){
+    for(int j=0; j<imgDisparity32F.cols; j++)
+      if(highestDisparity[i]<imgDisparity32F.at<float>(Point(j,i))){ highestDisparity[i]=imgDisparity32F.at<float>(Point(j,i)); jmax=j;}
+    cout<<i<<","<<jmax<<"---"<<highestDisparity[i]<<"\n";
+}
+///----------------------------------------------------------------------------------------------------------------------*/
+

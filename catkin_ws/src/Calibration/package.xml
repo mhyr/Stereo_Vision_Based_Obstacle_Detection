@@ -1,0 +1,22 @@
+<package>
+  <name>calibration</name>
+  <version>0.0.0</version>
+  <description> calibrate single type images</description>
+  <author>Mahyar Pedram</author>
+  <maintainer email="pedram@uni-bremen.de">Mahyar Pedram</maintainer>
+  <license>BSD</license>
+
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>image_transport</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>opencv2</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+
+  <run_depend>cv_bridge</run_depend>
+  <run_depend>image_transport</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>opencv2</run_depend>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+</package>

@@ -4,7 +4,12 @@ Obstacle detection is one the most important tasks for any autonomous mobile rob
 This work consists of the following main steps:
 
 1- CAMERA CALIBRATION
+
 2- IMAGE UNDISTORTION AND RECTIFICATION
+
 3- BUILDING DISPARITY MAP
+
 4- CLASSIFICATION AND RECOGNITION
+
 5- OBJECT CHARACTERISTICS AND IMAGE UNDERSTANDING
+

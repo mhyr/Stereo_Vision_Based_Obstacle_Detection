@@ -15,6 +15,18 @@ This work consists of the following main steps:
 
 ![alt text](FLow_Chart.jpg)
 
+As it can be seen in the flow chart, besides the main processing path, two sub-functions are highlighted in yellow. 
+I’m going to explain the blocks following the numbers because the other blocks don’t have much to explain.
+
+We are going through most of the main steps of a traditional image processing algorithm.
+
+2- Undistortion and rectification are pre-processing steps. They will prepare the image to be analyzed in the next steps.
+
+3- Building disparity map is a mid-level feature extraction step that will give us some 3D information about the scene.
+
+5- Recognition of the obstacle and computing the distance occurs in the 5 step.
+
+
 Sample1: https://youtu.be/rTAmvsUGNlw
 
 Sample2: https://youtu.be/9wm0IUBoThA

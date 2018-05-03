@@ -24,7 +24,7 @@ We are going through most of the main steps of a traditional image processing al
 
 3- Building disparity map is a mid-level feature extraction step that will give us some 3D information about the scene.
 
-5- Recognition of the obstacle and computing the distance occurs in the 5 step.
+5- Recognition of the obstacle and computing the distance occurs in the 5th step.
 
 
 Sample1: https://youtu.be/rTAmvsUGNlw

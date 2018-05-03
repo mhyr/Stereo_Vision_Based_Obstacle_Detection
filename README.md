@@ -13,6 +13,8 @@ This work consists of the following main steps:
 
 5- Object Characteristics and Image Understanding
 
+![select dataset](Flow Chart.jpg)
+
 Sample1: https://youtu.be/rTAmvsUGNlw
 
 Sample2: https://youtu.be/9wm0IUBoThA

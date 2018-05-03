@@ -27,6 +27,6 @@ We are going through most of the main steps of a traditional image processing al
 5- Recognition of the obstacle and computing the distance occurs in the 5th step.
 
 
-Sample1: https://youtu.be/rTAmvsUGNlw
+Sample1: https://youtu.be/tnaFcOpzOps
 
 Sample2: https://youtu.be/9wm0IUBoThA

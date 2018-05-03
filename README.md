@@ -29,4 +29,4 @@ We are going through most of the main steps of a traditional image processing al
 
 Sample1: https://youtu.be/tnaFcOpzOps
 
-Sample2: https://youtu.be/9wm0IUBoThA
+Sample2: https://youtu.be/LQupBSkA0Z4

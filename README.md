@@ -13,7 +13,7 @@ This work consists of the following main steps:
 
 5- Object Characteristics and Image Understanding
 
-![alt text](FLow%20Chart.jpg)
+![alt text](FLow_Chart.jpg)
 
 Sample1: https://youtu.be/rTAmvsUGNlw
 

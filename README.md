@@ -13,7 +13,7 @@ This work consists of the following main steps:
 
 5- Object Characteristics and Image Understanding
 
-![alt text](Stereo_Vision_Based_Obstacle_Detection/FLow%20Chart.jpg)
+![alt text](FLow%20Chart.jpg)
 
 Sample1: https://youtu.be/rTAmvsUGNlw
 
